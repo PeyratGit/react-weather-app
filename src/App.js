@@ -37,13 +37,13 @@ function App() {
   useEffect(() => {
     if (currentPosition !== undefined) {
       async function fetchApiCurrentUseEffect() {
-        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${currentPosition.coords.latitude}&lon=${currentPosition.coords.longitude}&units=metric&appid=84088695a543088c76bd882d8d187d1b`)
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${currentPosition.coords.latitude}&lon=${currentPosition.coords.longitude}&units=metric&appid=${process.env.REACT_APP_API_KEY_OPEN_WEATHER_MAP}`)
         let data = await response.json();
         setApiResultsCurrent(data);
         setColor(giveBackgroundColor(data.weather[0].main, new Date(data.dt * 1000)))
       }
       async function fetchApiForecastUseEffect() {
-        let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${currentPosition.coords.latitude},${currentPosition.coords.longitude}/next7days?unitGroup=metric&key=JQ59PAW9PS3WDYZUGFYPMGZDK&contentType=json`)
+        let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${currentPosition.coords.latitude},${currentPosition.coords.longitude}/next7days?unitGroup=metric&key=${process.env.REACT_APP_API_KEY_VISUAL_CROSSING}&contentType=json`)
         let data = await response.json();
         setApiResultsForecast(data);
       }
@@ -53,13 +53,13 @@ function App() {
   }, [currentPosition])
 
   async function fetchApiCurrent(input) {
-    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=84088695a543088c76bd882d8d187d1b`)
+    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${process.env.REACT_APP_API_KEY_OPEN_WEATHER_MAP}`)
     let data = await response.json();
     setApiResultsCurrent(data);
   }
 
   async function fetchApiForecast(input) {
-    let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${input}/next7days?unitGroup=metric&key=JQ59PAW9PS3WDYZUGFYPMGZDK&contentType=json`)
+    let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${input}/next7days?unitGroup=metric&key=${process.env.REACT_APP_API_KEY_VISUAL_CROSSING}&contentType=json`)
     let data = await response.json();
     setApiResultsForecast(data);
   }
@@ -101,7 +101,6 @@ function App() {
       </div>
     );
   } else if (apiResultsCurrent.cod === "404" || apiResultsCurrent.cod === "400") {
-    console.log("here")
     return (
       <div className="App no-data">
         <Form fetchApiCurrent={fetchApiCurrent} fetchApiForecast={fetchApiForecast} enableLocation={enableLocation} />
@@ -115,7 +114,6 @@ function App() {
       </div>
     );
   } else {
-    console.log(apiResultsCurrent.cod)
     return (
       <div className="App no-data">
         <div className="container">
