@@ -14,5 +14,5 @@
 - Feels like
 - Sunrise/Sunset
 - Daily/Weekly forecast
-###Bugs :
+### Bugs :
 - Scroll on y-axis doesn't work on real mobile phones
