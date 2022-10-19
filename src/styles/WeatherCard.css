@@ -1,0 +1,50 @@
+.weather-forecast {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin-top: 10px;
+  height: max-content;
+  padding: 0 0 5px 0;
+  position: relative;
+}
+
+.weather-forecast.mobile::-webkit-scrollbar {
+  display: none;
+}
+
+.weather-forecast::-webkit-scrollbar {
+  height: 10px;
+}
+
+.weather-forecast::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(163, 163, 163);
+  width: 120px;
+  height: 120px;
+}
+
+.forecast-card {
+  padding: 10px;
+  margin-left: 5px;
+  background: linear-gradient(122deg, #0B0F1B 0%, #0F1424 100%);
+  color: white;
+  border-radius: 15px;
+}
+
+.forecast-card .date {
+  color: #cbcbcbd9;
+}
+
+.forecast-card .weather {
+  margin: 10px 0 10px 0;
+}
+
+.forecast-card .temperature {
+  font-size: 24px;
+}
+
+.forecast-card img {
+  width: 64px;
+  height: 64px;
+}

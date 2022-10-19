@@ -1,0 +1,155 @@
+#location-card {
+  width: 90%;
+  max-width: 450px;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: linear-gradient(122deg, #0B0F1B 0%, #0F1424 100%);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+}
+
+.location-weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700;
+  height: 15%;
+  width: max-content;
+  margin-left: -2px;
+}
+
+.location-weather img {
+  width: 15%;
+  height: 15%;
+  margin-right: 5px;
+}
+
+.location-temperature {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 7px;
+  margin-bottom: 10px;
+}
+
+.location-temperature .temperature {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+.location-temperature .weather-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.location-infos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 30%;
+  width: 100%;
+}
+
+.location-infos .card {
+  width: 30%;
+  border-radius: 10px;
+  background-color: #111930;
+  padding: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0px 0px 11px 3px rgb(0, 0, 0, 0.49);
+}
+
+.location-infos .card .card-title {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+
+
+
+
+
+#location-sunset-card {
+  border-radius: 10px;
+  background: linear-gradient(122deg, #0B0F1B 0%, #0F1424 100%);
+  color: white;
+  width: 90%;
+  max-width: 450px;
+  padding: 10px;
+  margin: 5px 0 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: 700;
+}
+
+#location-sunset-card .sunrise, #location-sunset-card .sunset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#location-sunset-card img {
+  width: 80%;
+}
+
+#location-additional-infos {
+  border-radius: 10px;
+  background: linear-gradient(122deg, #0B0F1B 0%, #0F1424 100%);
+  color: white;
+  width: 90%;
+  max-width: 450px;
+  padding: 10px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 48px;
+}
+
+#location-additional-infos .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#location-additional-infos .item i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+#location-additional-infos .text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#location-additional-infos .text .title {
+  font-size: 12px;
+  color: #cbcbcbd9;
+}
+
+#location-additional-infos .wind-direction {
+  margin-left: 10px;
+}
+
+#location-additional-infos .wind-direction #wind-direction-stat {
+  margin-right: 5px;
+}
+
+#location-additional-infos .wind-direction .text .fa-solid.fa-arrow-right-long {
+  font-size: 14px;
+  margin-left: 0;
+}
+
+#location-additional-infos .cloudiness {
+  margin-left: 10px;
+}

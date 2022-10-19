@@ -1,0 +1,40 @@
+form {
+  width: 94%;
+  margin-bottom: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+form input {
+  font-family: 'Rubik';
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: none;
+  width: 50%;
+  font-size: 24px;
+  margin-left: 5px;
+  padding-top: 7px;
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+form input::placeholder {
+  color: rgba(224, 216, 216, 0.732);
+}
+
+.App.no-data form {
+  justify-content: center;
+}
+
+.App.no-data form input {
+  width:auto;
+  max-width: 200px;
+}
+
+.location-name i:hover {
+  color: white;
+  transition: ease-in-out .15s;
+}
